@@ -4,7 +4,7 @@ defmodule Febrd.Infura do
     http: HTTPoison,
     headers: [{"Authorization", "Bearer YOUR_INFURA_PROJECT_ID"}]
 
-  middleware FlizzyCash.Middleware.Logger
+  middleware Febrd.Middleware.Logger
 
   # Function to send Ethereum transactions
   def send_transaction(from, to, value) do
